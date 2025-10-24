@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carrito - AGAPE MATES</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+
+	<div class="encabezado">
+		<p class="parrafoencabezado">
+		   <a href="https://www.instagram.com/agape.mate/?hl=es" target="_blank"><b>
+					"CADA MATE ACOMPAÑA UNA HISTORIA"</b>
+		   </a>
+		</p>
+	</div>
+	<div class="titulo">
+		<img src="img/agape.png" alt="Titulo">
+	</div>
+	<button class="menu-toggle" id="menu-toggle">
+		☰ MENÚ
+	</button>
+	<nav>
+		<ul id="nav-links">
+			<li><a href="index.html">INICIO</a></li>
+			<li><a href="productos.html">PRODUCTOS</a></li>
+			<li><a href="sobrenosotros.html">SOBRE NOSOTROS</a></li>
+			<li><a href="contacto.html">CONTACTOS</a></li>
+			<li><a href="ubicacion.html">UBICACIÓN</a></li>
+			<li><a href="login.html"><b>LOGIN</b></a></li>
+			<li><a href="carrito.html"><b>CARRITO</b></a></li> 
+		</ul>
+	</nav>
+
+	<div class="pagina-carrito">
+		<h2>Mi Carrito de Compras</h2>
+
+		<div id="items-carrito">
+			<p>Tu carrito está vacío</p>
+		</div>
+
+		<div id="total-carrito" class="total-carrito">
+		</div>
+
+		<div class="botones-carrito">
+			<button id="vaciar-carrito" class="btn-accion">Vaciar Carrito</button>
+			<button id="finalizar-pedido" class="btn-accion btn-finalizar">Finalizar Pedido</button>
+		</div>
+	</div>
+
+
+	<div id="checkout-modal" class="modal-oculto">
+		<div class="modal-contenido">
+			<h3>Simulación de Pago</h3>
+			<p>Por favor, completa tus datos para finalizar la compra.</p>
+			
+			<form id="form-pago-simulado">
+				<div class="form-grupo">
+					<label for="nombre">Nombre Completo:</label>
+					<input type="text" id="nombre" placeholder="Tu Nombre Apellido" required>
+				</div>
+				<div class="form-grupo">
+					<label for="email">Email:</label>
+					<input type="email" id="email" placeholder="tu@email.com" required>
+				</div>
+				<div class="form-grupo">
+					<label>Método de Pago:</label>
+					<div><input type="radio" name="pago" checked> Tarjeta (simulación)</div>
+					<div><input type="radio" name="pago"> PayPal (simulación)</div>
+				</div>
+
+				<div class="modal-botones">
+					<button type="button" id="btn-cerrar-modal" class="btn-accion">Cancelar</button>
+					<button type="submit" id="btn-pagar" class="btn-accion btn-pagar">Pagar (Simular)</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+
+	<footer class="pie">
+		<p> © Agape Mates - Pagina creada por Daniel Moroño - Nicolas Mosqueda - Lautaro Baez </p>
+	</footer>
+	
+	<script src="menu.js"></script>
+	<script src="carrito.js"></script>
+
+</body>
+</html>

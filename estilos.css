@@ -307,3 +307,111 @@ h2 {
 .volver-link:hover {
 	text-decoration: underline;
 }
+/* ======================================= */
+/* ESTILOS PARA PRODUCTOS (NUEVO)          */
+/* ======================================= */
+.producto .precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.btn-agregar {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    font-family: "century gothic", Arial, Helvetica, sans-serif;
+}
+.btn-agregar:hover {
+    background-color: #555;
+}
+
+
+/* ======================================= */
+/* ESTILOS PARA LA PÁGINA CARRITO.HTML     */
+/* ======================================= */
+.pagina-carrito { 
+    padding: 20px; 
+    max-width: 800px; 
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+.item-carrito { 
+    display: flex; 
+    align-items: center; 
+    border-bottom: 1px solid #eee; 
+    padding: 10px 0; 
+}
+.item-carrito img { 
+    width: 80px; 
+    height: 80px; 
+    object-fit: cover; 
+    margin-right: 15px; 
+    border-radius: 4px;
+}
+.item-detalles h4 { margin: 0; }
+.item-detalles p { margin: 5px 0; color: #555; }
+
+.total-carrito { 
+    text-align: right; 
+    margin-top: 20px; 
+    font-size: 1.3rem;
+}
+.botones-carrito { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 20px; 
+}
+.btn-accion { 
+    padding: 10px 15px; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: bold;
+    border-radius: 5px;
+}
+.btn-finalizar { background-color: #25D366; color: white; }
+#vaciar-carrito { background-color: #E0E0E0; color: #333; }
+
+
+/* ======================================= */
+/* ESTILOS PARA EL MODAL DE PAGO (SIMULACIÓN) */
+/* ======================================= */
+.modal-oculto {
+    display: none; 
+    position: fixed; 
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 60px;
+}
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+.modal-contenido h3 { text-align: center; margin-bottom: 15px; }
+.form-grupo { margin-bottom: 15px; }
+.form-grupo label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-grupo input[type="text"],
+.form-grupo input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.modal-botones { display: flex; justify-content: space-between; margin-top: 20px; }
+.btn-pagar { background-color: #28a745; color: white; }
