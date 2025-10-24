@@ -1,0 +1,309 @@
+/* PAGINA EN GENERAL*/
+* {
+	padding: 0;
+	margin: 0;
+  	box-sizing: border-box;
+	/* Añadimos fuentes de respaldo por si "century gothic" no existe */
+	font-family: "century gothic", Arial, Helvetica, sans-serif;
+}
+
+/* Regla global para que imágenes e iframes sean responsive */
+img, iframe {
+	max-width: 100%;
+	height: auto;
+	display: block; /* Evita espacios extra debajo de las imágenes */
+}
+
+/* INICIO */
+.encabezado {
+	background-color: #000000;
+	width: 100%;
+	text-align: center;
+	padding: 5px;
+}
+.parrafoencabezado a{
+	color: white;
+	text-decoration: none;	
+}
+.titulo {
+	text-align: center;
+}
+.titulo img{
+	width: 250px; /* Mejor usar un ancho máximo fijo */
+	margin: 10px auto; /* Centrar la imagen */
+}
+.primeraimagen img{
+	width: 100%;
+}
+
+/* MENU */
+nav ul {
+	width: 100%;
+	background-color: #000000;
+	text-align: center;
+	padding: 15px;
+}
+nav li {
+	display: inline-flex;
+}
+nav a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	margin-right: 20px;
+	margin-left: 20px;
+	padding: 10px 0; /* Añadido para mejor clic */
+}
+nav li:hover{
+	background-color: #D7d7d7;
+}
+
+/* ===== ESTILO BOTÓN HAMBURGUESA ===== */
+.menu-toggle {
+	display: none; /* Oculto por defecto en desktop */
+	background-color: #000000;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 100%;
+	text-align: left;
+	font-family: "century gothic", Arial, Helvetica, sans-serif;
+}
+
+/* Clase 'active' que se agrega con JS para MOSTRAR el menú */
+nav ul.active {
+	display: block;
+}
+/* ================================== */
+
+
+/* ESTILOS PARA EL FORMULARIO DE LOGIN */
+.login-container {
+	padding: 30px 15px;
+	background-color: #f0f0f0;
+	display: flex;
+	justify-content: center;
+}
+#login-form {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	width: 100%;
+	max-width: 340px;
+	text-align: center;
+}
+#login-form div {
+	margin-bottom: 15px;
+	text-align: left;
+}
+#login-form label {
+	display: block;
+	margin-bottom: 5px;
+	font-size: 0.9rem;
+}
+#login-form input {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+#login-form button {
+	width: 100%;
+	padding: 10px;
+	background-color: #333;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+#login-form button:hover {
+	background-color: #555;
+}
+#mensaje {
+	margin-top: 15px;
+	font-size: 0.9em;
+}
+.error { color: red; }
+.exito { color: green; }
+/* ======================================= */
+
+
+/* SEGUNDO BLOQUE: IMAGENES Y TEXTO */
+.segundobloque{
+	text-align: center;
+	padding: 10px;
+}
+
+.bloqueproductos{
+	display: flex;
+	justify-content: center;
+	gap: 30px; /* Reducido para móviles */
+	padding: 20px 0;
+	flex-wrap: wrap; /* ! ESTA ES LA MAGIA ! */
+}
+
+.producto{
+  max-width: 250px;
+  width: 45%; /* Para que entren 2 en móvil */
+  min-width: 200px; /* Para que no se encoja demasiado */
+}
+
+.imagenproducto{
+  width: 100%;
+  border-radius: 8px;
+}
+
+.nombreproducto { /* Se aplica al h3 dentro */
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* BLOQUE "SOBRE NOSOTROS" y "CONTACTO"*/
+h2 {
+ 	text-align: center;
+}
+.bloquesobrenosotros{
+	display: flex;
+ 	align-items: flex-start;
+ 	justify-content: center;
+ 	gap: 40px;
+ 	padding: 40px;
+}
+
+.bloquesobrenosotros img{
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.parrafosomos{
+  margin-bottom: 10px;
+  line-height: 1.5;;
+  max-width: 500px;
+  text-align: left; /* Queda mejor */
+  font-size: 1rem;
+}
+
+/* BLOQUE "CONTACTO"*/
+.parrafocontacto{
+  margin-bottom: 10px;
+  line-height: 1.5;;
+  max-width: 500px;
+  text-align: center;
+  font-size: 1.5rem; /* Ajustado */
+  align-self: center; /* Para centrarlo con la imagen */
+}
+
+/* MAPA*/
+.mapa{
+	margin: 20px auto;
+	text-align: center;
+	padding: 10px;
+	max-width: 800px; /* Centra el mapa */
+}
+.mapa iframe {
+	width: 100%; /* El max-width: 100% global ya lo hace responsive */
+	height: 450px;
+	border: 0;
+}
+
+/* PIE DE LA PAGINA*/
+.pie {
+    background-color: #000000;
+    text-align: right;
+    padding: 15px;
+}
+
+.pie p{
+ 	font-size: 0.9rem;
+ 	color: white;
+ 	margin-right: 10px;
+ }
+
+
+/* ======================================= */
+/* MEDIA QUERY - RESPONSIVE (CELULARES)    */
+/* ======================================= */
+
+@media (max-width: 768px) {
+
+	/* 1. Mostramos el botón hamburguesa */
+	.menu-toggle {
+		display: block;
+	}
+
+	/* 2. Ocultamos el menú <ul> por defecto */
+	nav ul {
+		display: none;
+		padding: 0; /* Reseteamos padding para el modo desplegable */
+	}
+
+	/* 3. Hacemos que los <li> ocupen todo el ancho */
+	nav li {
+		display: block;
+		width: 100%;
+	}
+	nav a {
+		margin: 0;
+		display: block;
+		padding: 15px; /* Más padding para tocar fácil */
+		border-bottom: 1px solid #333; /* Separador */
+	}
+
+	/* ... (Resto de tus reglas responsive) ... */
+
+	/* Apilamos los bloques de "Sobre Nosotros" y "Contacto" */
+	.bloquesobrenosotros {
+		flex-direction: column;
+		align-items: center;
+		padding: 20px;
+		gap: 20px;
+	}
+	.parrafosomos {
+		text-align: center; /* Centrado en móvil se ve bien */
+	}
+
+	/* Centramos el texto del pie de página */
+	.pie {
+		text-align: center;
+	}
+	.pie p {
+		margin: 0;
+	}
+}
+
+/* ======================================= */
+/* ESTILOS PARA LA PÁGINA DE LOGIN         */
+/* ======================================= */
+
+/* Esta clase la usamos en el <body> de login.html */
+.body-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Alto mínimo de toda la pantalla */
+    background-color: #f0f0f0;
+}
+
+/* Ajuste para el contenedor de login en su propia página */
+.body-login .login-container {
+	padding: 0; /* Quitamos el padding anterior */
+}
+
+/* Enlace para "Volver al inicio" */
+.volver-link {
+	display: block;
+	margin-top: 20px;
+	font-size: 0.9em;
+	color: #555;
+	text-decoration: none;
+}
+.volver-link:hover {
+	text-decoration: underline;
+}
